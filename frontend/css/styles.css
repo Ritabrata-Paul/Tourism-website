@@ -1769,15 +1769,19 @@ button:hover {
   padding: 120px;
   text-align: center;
 }
+
 .sec3 h1 {
   font-size: 3rem;
-  width: 1000px;
+  width: 100%;
+  max-width: 1000px;
   margin: 20px auto 0;
 }
+
 .sec3 h3 {
   font-size: 1.5rem;
   color: grey;
-  width: 1000px;
+  width: 100%;
+  max-width: 1000px;
   margin: 20px auto 0;
   padding-top: 20px;
 }
@@ -1801,6 +1805,7 @@ button:hover {
   padding: 80px;
   text-align: center;
 }
+
 .sec4 h1 {
   font-size: 2.5rem;
   color: black;
@@ -1821,6 +1826,172 @@ button:hover {
   font-size: 1.5rem;
   border-radius: 50px;
   text-decoration: none;
+}
+
+/* Media Queries for Responsiveness */
+/* Extra Small Devices (Phones - < 576px) */
+/* Extra Small Devices (Portrait Phones - up to 575px) */
+@media screen and (max-width: 575px) {
+  /* Adjust padding for sections 3 and 4 */
+  .sec3,
+  .sec4 {
+    padding: 40px 20px;
+  }
+
+  /* Section 3 heading 1 adjustments */
+  .sec3 h1 {
+    font-size: 1.8rem;
+  }
+
+  /* Section 3 heading 3 adjustments */
+  .sec3 h3 {
+    font-size: 1rem;
+  }
+
+  /* Section 3 button adjustments */
+  .sec3 button {
+    padding-top: 40px;
+    font-size: 1.5rem;
+  }
+
+  /* Section 4 heading 1 adjustments */
+  .sec4 h1 {
+    font-size: 1.6rem;
+  }
+
+  /* Section 4 paragraph adjustments */
+  .sec4 p {
+    font-size: 1rem;
+    margin-bottom: 40px;
+  }
+
+  /* Section 4 anchor (link) adjustments */
+  .sec4 a {
+    font-size: 1.2rem;
+    padding: 15px;
+  }
+}
+
+/* Small Devices (Landscape Phones - 576px to 767px) */
+@media screen and (min-width: 576px) and (max-width: 767px) {
+  /* Adjust padding for sections 3 and 4 */
+  .sec3,
+  .sec4 {
+    padding: 60px 30px;
+  }
+
+  /* Section 3 heading 1 adjustments */
+  .sec3 h1 {
+    font-size: 2.2rem;
+  }
+
+  /* Section 3 heading 3 adjustments */
+  .sec3 h3 {
+    font-size: 1.2rem;
+  }
+
+  /* Section 3 button adjustments */
+  .sec3 button {
+    padding-top: 50px;
+    font-size: 1.8rem;
+  }
+
+  /* Section 4 heading 1 adjustments */
+  .sec4 h1 {
+    font-size: 2rem;
+  }
+
+  /* Section 4 paragraph adjustments */
+  .sec4 p {
+    font-size: 1.2rem;
+    margin-bottom: 50px;
+  }
+
+  /* Section 4 anchor (link) adjustments */
+  .sec4 a {
+    font-size: 1.4rem;
+    padding: 18px;
+  }
+}
+
+/* Medium Devices (Tablets - 768px to 991px) */
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  /* Adjust padding for sections 3 and 4 */
+  .sec3,
+  .sec4 {
+    padding: 80px 40px;
+  }
+
+  /* Section 3 heading 1 adjustments */
+  .sec3 h1 {
+    font-size: 2.5rem;
+  }
+
+  /* Section 3 heading 3 adjustments */
+  .sec3 h3 {
+    font-size: 1.3rem;
+  }
+
+  /* Section 3 button adjustments */
+  .sec3 button {
+    padding-top: 55px;
+    font-size: 2rem;
+  }
+
+  /* Section 4 heading 1 adjustments */
+  .sec4 h1 {
+    font-size: 2.2rem;
+  }
+
+  /* Section 4 paragraph adjustments */
+  .sec4 p {
+    font-size: 1.3rem;
+    margin-bottom: 60px;
+  }
+
+  /* Section 4 anchor (link) adjustments */
+  .sec4 a {
+    font-size: 1.5rem;
+    padding: 20px;
+  }
+}
+
+/* Large Devices (Desktops - 992px to 1199px) */
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+  /* Adjust padding for sections 3 and 4 */
+  .sec3,
+  .sec4 {
+    padding: 100px 50px;
+  }
+
+  /* Section 3 heading 1 adjustments */
+  .sec3 h1 {
+    font-size: 2.8rem;
+  }
+
+  /* Section 3 heading 3 adjustments */
+  .sec3 h3 {
+    font-size: 1.4rem;
+  }
+
+  /* Section 4 heading 1 adjustments */
+  .sec4 h1 {
+    font-size: 2.3rem;
+  }
+
+  /* Section 4 paragraph adjustments */
+  .sec4 p {
+    font-size: 1.4rem;
+  }
+}
+
+/* Extra Large Devices (Large Desktops - 1200px and above) */
+@media screen and (min-width: 1200px) {
+  /* Adjust padding for sections 3 and 4 */
+  .sec3,
+  .sec4 {
+    padding: 120px;
+  }
 }
 
 .body-forgot-password {

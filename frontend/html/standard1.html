@@ -1,31 +1,126 @@
 <!-- standard1.html -->
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Standard Rooms</title>
-    <link rel="stylesheet" href="/css/styles.css">
-</head>
-<body>
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body>
     <!--Header-->
     <my-header></my-header>
     <div class="slide"></div>
 
     <main class="product-page-display">
-        <img src="/images/standard1.jpg" alt="Standard Rooms">
-        <h2>Price: ₹800.00</h2>
-        <p>These rooms are good for couples or solo travelers for a short stay at a very affordable price.</p>
-        <button class="add-to-cart-btn">Add to Cart</button>
-        <!-- Add more details about the bouquet -->
+      <img src="/images/standard1.jpg" alt="Standard Rooms" />
+      <h2>Price: ₹800.00</h2>
+      <p>
+        These rooms are good for couples or solo travelers for a short stay at a
+        very affordable price.
+      </p>
+      <button class="add-to-cart-btn">Add to Cart</button>
+      <!-- Add more details about the bouquet -->
     </main>
-    
+
     <!--Footer-->
     <my-footer></my-footer>
 
-
     <!--JavaScript link-->
     <script src="/js/script.js"></script>
+    <script>
+            document.addEventListener('DOMContentLoaded', () => {
+          // Utility functions for cart management
+          const CartManager = {
+              getCart() {
+                  const cart = localStorage.getItem('cart');
+                  return cart ? JSON.parse(cart) : [];
+              },
 
-</body>
+              saveCart(cart) {
+                  localStorage.setItem('cart', JSON.stringify(cart));
+              },
+
+              addToCart(item) {
+                  const cart = this.getCart();
+                  cart.push(item);
+                  this.saveCart(cart);
+              },
+
+              calculateTotal(cart) {
+                  if (!Array.isArray(cart)) return 0;
+                  return cart.reduce((total, item) => total + (item.price || 0), 0);
+              }
+          };
+
+          // Add to Cart functionality for product pages
+          const addToCartButtons = document.querySelectorAll('.add-to-cart-btn');
+          addToCartButtons.forEach(button => {
+              button.addEventListener('click', () => {
+                  // Safely get product details
+                  const productImage = document.querySelector('main img')?.src || '';
+                  const priceElement = document.querySelector('main h2');
+                  const price = priceElement ?
+                      parseFloat(priceElement.textContent.replace('Price: ₹', '')) : 0;
+
+                  // Create cart item
+                  const cartItem = {
+                      id: Date.now(), // Unique identifier
+                      name: 'Standard Room',
+                      image: productImage,
+                      price: price
+                  };
+
+                  // Add to cart and redirect
+                  CartManager.addToCart(cartItem);
+                  window.location.href = 'cart.html';
+              });
+          });
+
+          // Cart page specific logic
+          if (window.location.pathname.includes('cart.html')) {
+              const cartItems = document.getElementById('cart-items');
+              const emptyCartMessage = document.getElementById('empty-cart-message');
+              const totalPriceElement = document.getElementById('total-price');
+
+              // Retrieve and display cart items
+              const cart = CartManager.getCart();
+
+              if (cart.length === 0) {
+                  cartItems?.style.display = 'none';
+                  emptyCartMessage?.style.display = 'block';
+                  totalPriceElement.textContent = '0.00';
+              } else {
+                  cartItems?.style.display = 'grid';
+                  emptyCartMessage?.style.display = 'none';
+
+                  // Clear existing cart items
+                  if (cartItems) cartItems.innerHTML = '';
+
+                  // Calculate and display total
+                  const totalPrice = CartManager.calculateTotal(cart);
+
+                  // Render cart items
+                  cart.forEach(item => {
+                      const cartItemDiv = document.createElement('div');
+                      cartItemDiv.classList.add('cart-item');
+                      cartItemDiv.innerHTML = `
+                          <img src="${item.image}" alt="${item.name}">
+                          <div class="cart-item-details">
+                              <h3>${item.name}</h3>
+                              <p>Price: ₹${item.price.toFixed(2)}</p>
+                          </div>
+                      `;
+                      cartItems?.appendChild(cartItemDiv);
+                  });
+
+                  // Update total price
+                  if (totalPriceElement) {
+                      totalPriceElement.textContent = totalPrice.toFixed(2);
+                  }
+              }
+          }
+      });
+    </script>
+  </body>
 </html>
