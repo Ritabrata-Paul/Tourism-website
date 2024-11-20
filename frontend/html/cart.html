@@ -1,0 +1,43 @@
+<!-- cart.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Cart</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <!--Header-->
+    <my-header></my-header>
+    <div class="slide"></div>
+
+    <!--Main Cart container-->
+    <main class="cart-container">
+        <h1>Your Shopping Cart</h1>
+
+        <div id="cart-items"></div>
+
+        <!--Cart counter-->
+        <div class="cart-total">
+            <h2>Total: $<span id="total-price">0.00</span></h2>
+            <button id="checkout-btn">Proceed to Checkout</button>
+        </div>
+    </main>
+
+    <!--Footer-->
+    <my-footer></my-footer>
+
+    <script src="/js/script.js"></script>
+    <script>
+        // Load the header dynamically
+        document.addEventListener('DOMContentLoaded', function() {
+            fetch('header.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('header-placeholder').innerHTML = data;
+                });
+        });
+    </script>
+</body>
+</html>

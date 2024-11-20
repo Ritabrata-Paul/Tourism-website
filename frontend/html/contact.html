@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <!--Header-->
+    <my-header></my-header>
+    <div class="slide"></div>
+
+    <div class="contact-section">
+        <h1>Contact Us</h1>
+        <p class="head" id="scroll_color">We'd love to hear from you! Please fill out the form below, or reach out to us via the contact details listed.</p>
+    </div>
+
+    <div class="contact-content">
+        <div class="content-section">
+            <h2 class="get_in_touch">Get in Touch</h2>
+            <form id="contact-form">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" placeholder="Your full name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" placeholder="Your email address" required>
+
+                <label for="number">Phone:</label>
+                <input type="number" id="number" placeholder="Your contact number" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" rows="5" placeholder="Write your message here..." required></textarea>
+
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+        
+        <div class="content-section contact-details get_in_touch">
+            <h2>Contact Information</h2>
+            <p>Email: <a href="mailto:info@flowerbouquets.com">info@flowerbouquets.com</a></p>
+            <p>Phone: +1 (123) 456-7890</p>
+            <p>Address: 123 Flower Lane, Floral City, FL 32123</p>
+            <p>Business Hours: Mon-Fri, 9:00 AM - 6:00 PM</p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <my-footer></my-footer>
+
+    <script src="/js/script.js"></script>
+    <script>
+        // Form submission handler
+        document.getElementById("contact-form").addEventListener("submit", async function(event) {
+            event.preventDefault(); // Prevent form from refreshing the page
+
+            const formData = {
+                name: document.getElementById("name").value,
+                email: document.getElementById("email").value,
+                phone: document.getElementById("number").value,
+                message: document.getElementById("message").value,
+            };
+
+            try {
+                const response = await fetch("http://localhost:5000/contact/submit", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                    },
+                    body: JSON.stringify(formData),
+                });
+
+                const data = await response.json();
+
+                if (response.ok) {
+                    alert("Your message has been submitted successfully!");
+                    // Optionally reset the form
+                    document.getElementById("contact-form").reset();
+                } else {
+                    alert(data.message || "Error submitting the form");
+                }
+            } catch (error) {
+                console.error("Error:", error);
+                alert("There was an issue with the form submission.");
+            }
+        });
+    </script>
+</body>
+</html>

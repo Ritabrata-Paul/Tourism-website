@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register - Flower Bouquets</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body>
+    <main>
+      <section class="registration-section">
+        <div class="registration-container">
+          <h2>Create Your Account</h2>
+          <form id="registration-form">
+            <label for="name">Full Name:</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              required
+              placeholder="Enter your full name"
+            />
+
+            <label for="email">Email:</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              required
+              placeholder="Enter your email"
+            />
+
+            <label for="number">Phone:</label>
+            <input
+              type="number"
+              id="number"
+              name="phone"
+              required
+              placeholder="Enter your Contact number"
+            />
+
+            <label for="password">Password:</label>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              required
+              placeholder="Enter your password"
+            />
+
+            <label for="confirm-password">Confirm Password:</label>
+            <input
+              type="password"
+              id="confirm-password"
+              name="confirm-password"
+              required
+              placeholder="Confirm your password"
+            />
+
+            <button type="submit" class="register-button">Register</button>
+          </form>
+          <p class="login-link">
+            Already have an account? <a href="login.html">Login here</a>
+          </p>
+          <p class="login-link">
+            Go Back to homepage? <a href="index.html">Go Back</a>
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <script>
+      document
+        .getElementById("registration-form")
+        .addEventListener("submit", async (e) => {
+          e.preventDefault();
+          const formData = new FormData(e.target);
+          const data = Object.fromEntries(formData.entries());
+
+          try {
+            const response = await fetch(
+              "http://localhost:5000/auth/register",
+              {
+                method: "POST",
+                headers: {
+                  "Content-Type": "application/json",
+                },
+                body: JSON.stringify(data),
+              }
+            );
+
+            const result = await response.json();
+            if (response.ok) {
+              alert("Registration successful");
+              window.location.href = "login.html";
+            } else {
+              alert(result.message || "Registration failed");
+            }
+          } catch (error) {
+            console.error("Error:", error);
+            alert("Server error. Please try again later.");
+          }
+        });
+    </script>
+  </body>
+</html>

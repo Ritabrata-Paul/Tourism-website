@@ -1,0 +1,27 @@
+{
+  "name": "frontend",
+  "version": "1.0.0",
+  "description": "Frontend application for the Travel-Tourism project",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon server.js",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "keywords": ["travel", "tourism", "frontend", "react"],
+  "author": "Your Name",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.5.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.17.0",
+    "react-scripts": "5.0.1",
+    "web-vitals": "^3.0.4"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.7"
+  },
+  "proxy": "http://localhost:5000"
+}

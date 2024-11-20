@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Travel and Tourism</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body>
+    <!--Header-->
+    <my-header></my-header>
+
+    <!-- Image Slider (Product Ads) -->
+    <div class="slider">
+      <div class="slides">
+        <!-- Multiple Slides (Product Ads) -->
+        <div class="slide">
+          <img src="/images/slider1.jpg" alt="Slider1" />
+        </div>
+        <div class="slide">
+          <img src="/images/slider2.jpg" alt="Slider2" />
+        </div>
+        <div class="slide">
+          <img src="/images/slider3.jpg" alt="Slider3" />
+        </div>
+        <div class="slide">
+          <img src="/images/slider4.jpg" alt="Slider4" />
+        </div>
+        <!-- Add more slides here -->
+      </div>
+
+      <!-- Navigation for the slider -->
+      <a class="prev" onclick="moveSlide(-1)">&#10094;</a>
+      <a class="next" onclick="moveSlide(1)">&#10095;</a>
+    </div>
+
+    <main>
+      <!-- Category 1: Roses -->
+
+      <div class="search-bar-container">
+        <form id="searchForm">
+          <div class="search-bar" id="searchBar">
+            <!-- Destination -->
+            <div class="search-item" id="destinationFilter">
+              <span>Destination</span>
+              <input
+                type="text"
+                id="destination"
+                name="destination"
+                placeholder="Where to?"
+              />
+            </div>
+
+            <!-- Check-In Date -->
+            <div class="search-item">
+              <span>Check-In</span>
+              <input type="date" id="checkin" name="checkin" />
+            </div>
+
+            <!-- Check-Out Date -->
+            <div class="search-item">
+              <span>Check-Out</span>
+              <input type="date" id="checkout" name="checkout" />
+            </div>
+
+            <!-- Adults -->
+            <div class="search-item">
+              <span>Adults</span>
+              <input
+                type="number"
+                id="adults"
+                name="adults"
+                min="1"
+                value="1"
+              />
+            </div>
+
+            <!-- Children -->
+            <div class="search-item">
+              <span>Children</span>
+              <input
+                type="number"
+                id="children"
+                name="children"
+                min="0"
+                value="0"
+              />
+            </div>
+
+            <!-- Rooms -->
+            <div class="search-item">
+              <span>Rooms</span>
+              <input type="number" id="rooms" name="rooms" min="1" value="1" />
+            </div>
+
+            <!-- Search Button -->
+            <button type="submit" class="search-button">Search</button>
+          </div>
+        </form>
+      </div>
+
+      <!-- Cards Section -->
+      <section class="cards">
+        <div class="card" onclick="scrollToSection('#section1')">
+          <h3>Millions of travel destinations</h3>
+          <p>
+            Explore different countries to travel with your families and
+            friends.
+          </p>
+        </div>
+        <div class="card" onclick="scrollToSection('#section2')">
+          <h3>Trending destinations</h3>
+          <p>
+            Ensure quality experience for travellers, with your family protected
+            for and situations.
+          </p>
+        </div>
+        <div class="card" onclick="scrollToSection('#section3')">
+          <h3>Tailored quality experience</h3>
+          <p>
+            Get curated benefits, such as exclusive discounts, enhanced
+            protection, and extra support, to get best service in every step of
+            the way.
+          </p>
+        </div>
+        <div class="card" onclick="scrollToSection('#section5')">
+          <h3>Get Started</h3>
+          <p>Discover more about us.</p>
+          <p>Scroll down...</p>
+        </div>
+      </section>
+
+      <!-- Target Sections -->
+      <section id="section1">
+        <div class="icon-container">
+          <a href="india.html">
+            <div class="icon" onclick="redirectTo('india.html')">
+              <img src="/images/indian-flag.jpg" alt="India Flag" /> <br />
+              <p>India</p>
+            </div></a
+          >
+          <a href="nepal.html">
+            <div class="icon" onclick="redirectTo('nepal.html')">
+              <img src="/images/nepal-flag.jpg" alt="Nepal Flag" /> <br />
+              <p>Nepal</p>
+            </div></a
+          >
+          <a href="bhutan.html">
+            <div class="icon" onclick="redirectTo('bhutan.html')">
+              <img src="/images/bhutan-flag.jpg" alt="Bhutan Flag" /> <br />
+              <p>Bhutan</p>
+            </div></a
+          >
+          <a href="lanka.html">
+            <div class="icon" onclick="redirectTo('lanka.html')">
+              <img src="/images/lanka-flag.jpg" alt="Srilanka Flag" /> <br />
+              <p>Srilanka</p>
+            </div></a
+          >
+          <a href="pakistan.html">
+            <div class="icon" onclick="redirectTo('pakistan.html')">
+              <img src="/images/pakistan-flag.jpg" alt="Pakistan Flag" /> <br />
+              <p>Pakistan</p>
+            </div></a
+          >
+          <a href="china.html">
+            <div class="icon" onclick="redirectTo('china.html')">
+              <img src="/images/china-flag.jpg" alt="China Flag" /> <br />
+              <p>China</p>
+            </div></a
+          >
+          <a href="australia.html">
+            <div class="icon" onclick="redirectTo('australia.html')">
+              <img src="/images/australia-flag.jpg" alt="Australia Flag" />
+              <br />
+              <p>Australia</p>
+            </div></a
+          >
+          <a href="UK.html">
+            <div class="icon" onclick="redirectTo('UK.html')">
+              <img src="/images/UK-flag.jpg" alt="UK Flag" /> <br />
+              <p>UK</p>
+            </div></a
+          >
+          <a href="russia.html">
+            <div class="icon" onclick="redirectTo('russia.html')">
+              <img src="/images/russia-flag.jpg" alt="Russia Flag" /> <br />
+              <p>Russia</p>
+            </div></a
+          >
+          <a href="canada.html">
+            <div class="icon" onclick="redirectTo('canada.html')">
+              <img src="/images/canada-flag.jpg" alt="Canada Flag" /> <br />
+              <p>Canada</p>
+            </div></a
+          >
+          <a href="alaska.html">
+            <div class="icon" onclick="redirectTo('alaska.html')">
+              <img src="/images/alaska-flag.jpg" alt="Alaska Flag" /> <br />
+              <p>Alaska</p>
+            </div></a
+          >
+          <a href="USA.html">
+            <div class="icon" onclick="redirectTo('USA.html')">
+              <img src="/images/USA-flag.jpg" alt="USA Flag" /> <br />
+              <p>USA</p>
+            </div></a
+          >
+          <a href="skorea.html">
+            <div class="icon" onclick="redirectTo('skorea.html')">
+              <img src="/images/skorea-flag.jpg" alt="South Korea Flag" />
+              <br />
+              <p>South Korea</p>
+            </div></a
+          >
+          <a href="malaysia.html">
+            <div class="icon" onclick="redirectTo('malaysia.html')">
+              <img src="/images/malaysia-flag.jpg" alt="Malaysia Flag" /> <br />
+              <p>Malaysia</p>
+            </div></a
+          >
+        </div>
+      </section>
+
+      <section class="sec2" id="section2">
+        <section class="city-cards">
+          <div class="city-card" onclick="navigateToCity('New Delhi')">
+            <a href="delhi.html"
+              ><img src="/images/delhi-image.jpg" alt="New Delhi"
+            /></a>
+            <div class="city-info">
+              <span>New Delhi</span>
+              <img src="/images/indian-flag.jpg" alt="India Flag" />
+            </div>
+          </div>
+          <div class="city-card" onclick="navigateToCity('Agra')">
+            <a href="agra.html"
+              ><img src="/images//agra-image.jpg" alt="Agra"
+            /></a>
+            <div class="city-info">
+              <span>Agra</span>
+              <img src="/images/indian-flag.jpg" alt="India Flag" />
+            </div>
+          </div>
+          <div class="city-card" onclick="navigateToCity('Kolkata')">
+            <a href="kolkata.html"
+              ><img src="/images/kolkata-image.jpg" alt="Kolkata"
+            /></a>
+            <div class="city-info">
+              <span>Kolkata</span>
+              <img src="/images/indian-flag.jpg" alt="India Flag" />
+            </div>
+          </div>
+          <div class="city-card" onclick="navigateToCity('Mumbai')">
+            <a href="mumbai.html"
+              ><img src="/images/mumbai-image.jpg" alt="Mumbai"
+            /></a>
+            <div class="city-info">
+              <span>Mumbai</span>
+              <img src="/images/indian-flag.jpg" alt="India Flag" />
+            </div>
+          </div>
+          <div class="city-card" onclick="navigateToCity('Hyderabad')">
+            <a href="hyderabad.html"
+              ><img src="/images/hyderabad-image.jpg" alt="Hyderabad"
+            /></a>
+            <div class="city-info">
+              <span>Hyderabad</span>
+              <img src="/images/indian-flag.jpg" alt="India Flag" />
+            </div>
+          </div>
+          <div class="city-card" onclick="navigateToCity('Chattisgarh')">
+            <a href="chattisgarh.html"
+              ><img src="/images/chattisgarh-image.jpg" alt="Chattisgarh"
+            /></a>
+            <div class="city-info">
+              <span>Chattisgarh</span>
+              <img src="/images/indian-flag.jpg" alt="India Flag" />
+            </div>
+          </div>
+          <div class="city-card" onclick="navigateToCity('Kerala')">
+            <a href="kerala.html"
+              ><img src="/images/kerala-image.jpg" alt="Kerala"
+            /></a>
+            <div class="city-info">
+              <span>Kerala</span>
+              <img src="/images/indian-flag.jpg" alt="India Flag" />
+            </div>
+          </div>
+          <div class="city-card" onclick="navigateToCity('Ladakh')">
+            <a href="ladakh.html"
+              ><img src="/images/ladakh-image.jpg" alt="Ladakh"
+            /></a>
+            <div class="city-info">
+              <span>Ladakh</span>
+              <img src="/images/indian-flag.jpg" alt="India Flag" />
+            </div>
+          </div>
+          <div class="city-card" onclick="navigateToCity('Kashmir')">
+            <a href="kashmir.html"
+              ><img src="/images/kashmir-image.jpg" alt="Kashmir"
+            /></a>
+            <div class="city-info">
+              <span>Kashmir</span>
+              <img src="/images/indian-flag.jpg" alt="India Flag" />
+            </div>
+          </div>
+          <div class="city-card" onclick="navigateToCity('Goa')">
+            <a href="goa.html"><img src="/images/goa-image.jpg" alt="Goa" /></a>
+            <div class="city-info">
+              <span>Goa</span>
+              <img src="/images/indian-flag.jpg" alt="India Flag" />
+            </div>
+          </div>
+        </section>
+      </section>
+
+      <section class="sec3" id="section3">
+        <h1>
+          Get tailored discounts, services, and quality experience on every
+          stage of life.
+        </h1>
+        <h3>
+          Enjoy with curated benefits offered by the travel packages, whether
+          you are low on budget or need the quality time with your family. Get
+          the best service at an affordable price.
+        </h3>
+        <button><a href="#">Learn More...</a></button>
+      </section>
+
+      <section class="sec4" id="section5">
+        <h1>Ready to get started?</h1>
+        <p>
+          Explore millions of travel options to different parts of the world by
+          signing up today!
+        </p>
+        <a href="/html/register.html">Sign Up</a>
+      </section>
+
+      <!-- Repeat for other categories -->
+    </main>
+
+    <!--Footer-->
+    <my-footer></my-footer>
+
+    <!--JavaScript link-->
+    <script src="/js/script.js"></script>
+  </body>
+</html>

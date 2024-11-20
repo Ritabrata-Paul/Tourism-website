@@ -1,0 +1,539 @@
+<!-- camera.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Camera</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <!--Header-->
+    <my-header></my-header>
+    <div class="slide"></div>
+
+
+    <main class="product-page-display">
+
+        <!-- Filter Section -->
+        
+        <h1 class="page-head">Hotels</h1>
+
+
+        <!-- Filter Section -->
+        <section class="filter-section">
+            <div class="filter-container">
+                <h3>Filter search</h3>
+                <form id="filterForm">
+                    <!-- Type Filter -->
+                    <label class="filter-lable" for="type">Type:</label>
+                    <select id="type" name="type">
+                        <option value="All">All</option>
+                        <option value="SLR">SLR</option>
+                        <option value="DSLR">DSLR</option>
+                        <option value="Mirrorless">Mirrorless</option>
+                        <option value="Video">Video</option>
+                    </select>
+    
+                    <!-- Price Filter -->
+                    <label class="filter-lable" for="Price">Price:</label>
+                    <select id="Price" name="Price">
+                        <option value="all">All</option>
+                        <option value="Under 25K">Under 25K</option>
+                        <option value="Under 50K">Under 50K</option>
+                        <option value="Under 90K">Under 90K</option>
+                        <option value="Under 200K">Under 200K</option>
+                    </select>
+    
+                    <!-- Sort Filter -->
+                    <label class="filter-lable" for="sort">Sort:</label>
+                    <select id="sort" name="sort">
+                        <option value="relevant">Relevant</option>
+                        <option value="low-high">Low to High</option>
+                        <option value="high-low">High to Low</option>
+                    </select>
+    
+                    <!-- Submit Button -->
+                    <button class="filter-lable" type="button" onclick="applyFilters()">Apply Filters</button>
+                </form>
+            </div>
+            </section>
+
+        <section id="category1" class="bouquet-section">
+
+            <h2>Standard Rooms</h2>
+            <div class="bouquet-grid">
+                <!-- Rose Bouquet Card with Link -->
+                <a href="/html//standard1.html" class="bouquet-card">
+                    <img src="/images/standard1.jpg" alt="Standard Rooms">
+                    <h3>Standard Rooms</h3><br>
+                    <p>Stand-alone houses designed for one family.</p><br>
+                    <span class="price">₹2500.00</span><br><br><br>
+                    <button class="add-to-cart-btn">Details</button>
+                </a>
+                <a href="/html//standard2.html" class="bouquet-card">
+                    <img src="/images/standard2.jpg" alt="Standard Rooms">
+                    <h3>Standard Rooms</h3><br>
+                    <p>Stand-alone houses designed for one family.</p><br>
+                    <span class="price">₹2500.00</span><br><br><br>
+                    <button class="add-to-cart-btn">Details</button>
+                </a>
+                <a href="/html//standard3.html" class="bouquet-card">
+                    <img src="/images/standard3.jpg" alt="Standard Rooms">
+                    <h3>Standard Rooms</h3><br>
+                    <p>Stand-alone houses designed for one family.</p><br>
+                    <span class="price">₹2500.00</span><br><br><br>
+                    <button class="add-to-cart-btn">Details</button>
+                </a>
+                <a href="/html//standard4.html" class="bouquet-card">
+                    <img src="/images/standard4.jpg" alt="Standard Rooms">
+                    <h3>Standard Rooms</h3><br>
+                    <p>Stand-alone houses designed for one family.</p><br>
+                    <span class="price">₹2500.00</span><br><br><br>
+                    <button class="add-to-cart-btn">Details</button>
+                </a>
+                <a href="/html//standard5.html" class="bouquet-card">
+                    <img src="/images/standard5.jpg" alt="Standard Rooms">
+                    <h3>Standard Rooms</h3><br>
+                    <p>Stand-alone houses designed for one family.</p><br>
+                    <span class="price">₹2500.00</span><br><br><br>
+                    <button class="add-to-cart-btn">Details</button>
+                </a>
+                <a href="/html//standard6.html" class="bouquet-card">
+                    <img src="/images/standard6.jpg" alt="Standard Rooms">
+                    <h3>Standard Rooms</h3><br>
+                    <p>Stand-alone houses designed for one family.</p><br>
+                    <span class="price">₹2500.00</span><br><br><br>
+                    <button class="add-to-cart-btn">Details</button>
+                </a>
+                <!-- Repeat for more Properties -->
+            </div>
+        </section>
+
+        <section id="category1" class="bouquet-section">
+
+            <h2>Deluxe Rooms</h2>
+            <div class="bouquet-grid">
+                <!-- Rose Bouquet Card with Link -->
+                <a href="/html//deluxe1.html" class="bouquet-card">
+                    <img src="/images/deluxe1.jpg" alt="Deluxe Rooms">
+                    <h3>Deluxe Rooms</h3><br>
+                    <p>Stand-alone houses designed for one family.</p><br>
+                    <span class="price">₹14000.00</span><br><br><br>
+                    <button class="add-to-cart-btn">Details</button>
+                </a>
+                <a href="/html//deluxe2.html" class="bouquet-card">
+                    <img src="/images/deluxe2.jpg" alt="Deluxe Rooms">
+                    <h3>Deluxe Rooms</h3><br>
+                    <p>Stand-alone houses designed for one family.</p><br>
+                    <span class="price">₹14000.00</span><br><br><br>
+                    <button class="add-to-cart-btn">Details</button>
+                </a>
+                <a href="/html//deluxe3.html" class="bouquet-card">
+                    <img src="/images/deluxe3.jpg" alt="Deluxe Rooms">
+                    <h3>Deluxe Rooms</h3><br>
+                    <p>Stand-alone houses designed for one family.</p><br>
+                    <span class="price">₹14000.00</span><br><br><br>
+                    <button class="add-to-cart-btn">Details</button>
+                </a>
+                <a href="/html//deluxe4.html" class="bouquet-card">
+                    <img src="/images/deluxe4.jpg" alt="Deluxe Rooms">
+                    <h3>Deluxe Rooms</h3><br>
+                    <p>Stand-alone houses designed for one family.</p><br>
+                    <span class="price">₹14000.00</span><br><br><br>
+                    <button class="add-to-cart-btn">Details</button>
+                </a>
+                <a href="/html//deluxe5.html" class="bouquet-card">
+                    <img src="/images/deluxe5.jpg" alt="Deluxe Rooms">
+                    <h3>Deluxe Rooms</h3><br>
+                    <p>Stand-alone houses designed for one family.</p><br>
+                    <span class="price">₹14000.00</span><br><br><br>
+                    <button class="add-to-cart-btn">Details</button>
+                </a>
+                <a href="/html//deluxe6.html" class="bouquet-card">
+                    <img src="/images/deluxe6.jpg" alt="Deluxe Rooms">
+                    <h3>Deluxe Rooms</h3><br>
+                    <p>Stand-alone houses designed for one family.</p><br>
+                    <span class="price">₹14000.00</span><br><br><br>
+                    <button class="add-to-cart-btn">Details</button>
+                </a>
+                <!-- Repeat for more Properties -->
+            </div>
+        </section>
+
+        <section id="category1" class="bouquet-section">
+
+            <h2>Suites</h2>
+            <div class="bouquet-grid">
+                <!-- Rose Bouquet Card with Link -->
+                <a href="/html//suite1.html" class="bouquet-card">
+                    <img src="/images/suite1.jpg" alt="Suites">
+                    <h3>Suites</h3><br>
+                    <p>Stand-alone houses designed for one family.</p><br>
+                    <span class="price">₹68000.00</span><br><br><br>
+                    <button class="add-to-cart-btn">Details</button>
+                </a>
+                <a href="/html//suite2.html" class="bouquet-card">
+                    <img src="/images/suite2.jpg" alt="Suites">
+                    <h3>Suites</h3><br>
+                    <p>Stand-alone houses designed for one family.</p><br>
+                    <span class="price">₹68000.00</span><br><br><br>
+                    <button class="add-to-cart-btn">Details</button>
+                </a>
+                <a href="/html//suite3.html" class="bouquet-card">
+                    <img src="/images/suite3.jpg" alt="Suites">
+                    <h3>Suites</h3><br>
+                    <p>Stand-alone houses designed for one family.</p><br>
+                    <span class="price">₹68000.00</span><br><br><br>
+                    <button class="add-to-cart-btn">Details</button>
+                </a>
+                <a href="/html//suite4.html" class="bouquet-card">
+                    <img src="/images/suite4.jpg" alt="Suites">
+                    <h3>Suites</h3><br>
+                    <p>Stand-alone houses designed for one family.</p><br>
+                    <span class="price">₹68000.00</span><br><br><br>
+                    <button class="add-to-cart-btn">Details</button>
+                </a>
+                <a href="/html//suite5.html" class="bouquet-card">
+                    <img src="/images/suite5.jpg" alt="Suites">
+                    <h3>Suites</h3><br>
+                    <p>Stand-alone houses designed for one family.</p><br>
+                    <span class="price">₹68000.00</span><br><br><br>
+                    <button class="add-to-cart-btn">Details</button>
+                </a>
+                <a href="/html//suite6.html" class="bouquet-card">
+                    <img src="/images/suite6.jpg" alt="Suites">
+                    <h3>Suites</h3><br>
+                    <p>Stand-alone houses designed for one family.</p><br>
+                    <span class="price">₹68000.00</span><br><br><br>
+                    <button class="add-to-cart-btn">Details</button>
+                </a>
+                <!-- Repeat for more Properties -->
+            </div>
+        </section>
+
+        <section id="category1" class="bouquet-section">
+
+            <h2>Family Rooms</h2>
+            <div class="bouquet-grid">
+                <!-- Rose Bouquet Card with Link -->
+                <a href="/html//family1.html" class="bouquet-card">
+                    <img src="/images/family1.jpg" alt="Family Rooms">
+                    <h3>Family Rooms</h3><br>
+                    <p>Stand-alone houses designed for one family.</p><br>
+                    <span class="price">₹8500.00</span><br><br><br>
+                    <button class="add-to-cart-btn">Details</button>
+                </a>
+                <a href="/html//family2.html" class="bouquet-card">
+                    <img src="/images/family2.jpg" alt="Family Rooms">
+                    <h3>Family Rooms</h3><br>
+                    <p>Stand-alone houses designed for one family.</p><br>
+                    <span class="price">₹8500.00</span><br><br><br>
+                    <button class="add-to-cart-btn">Details</button>
+                </a>
+                <a href="/html//family3.html" class="bouquet-card">
+                    <img src="/images/family3.jpg" alt="Family Rooms">
+                    <h3>Family Rooms</h3><br>
+                    <p>Stand-alone houses designed for one family.</p><br>
+                    <span class="price">₹8500.00</span><br><br><br>
+                    <button class="add-to-cart-btn">Details</button>
+                </a>
+                <a href="/html//family4.html" class="bouquet-card">
+                    <img src="/images/family4.jpg" alt="Family Rooms">
+                    <h3>Family Rooms</h3><br>
+                    <p>Stand-alone houses designed for one family.</p><br>
+                    <span class="price">₹8500.00</span><br><br><br>
+                    <button class="add-to-cart-btn">Details</button>
+                </a>
+                <a href="/html//family5.html" class="bouquet-card">
+                    <img src="/images/family5.jpg" alt="Family Rooms">
+                    <h3>Family Rooms</h3><br>
+                    <p>Stand-alone houses designed for one family.</p><br>
+                    <span class="price">₹8500.00</span><br><br><br>
+                    <button class="add-to-cart-btn">Details</button>
+                </a>
+                <a href="/html//family6.html" class="bouquet-card">
+                    <img src="/images/family6.jpg" alt="Family Rooms">
+                    <h3>Family Rooms</h3><br>
+                    <p>Stand-alone houses designed for one family.</p><br>
+                    <span class="price">₹8500.00</span><br><br><br>
+                    <button class="add-to-cart-btn">Details</button>
+                </a>
+                <!-- Repeat for more Properties -->
+            </div>
+        </section>
+
+
+        <section id="category1" class="bouquet-section">
+
+            <h2>Under 1K</h2>
+            <div class="bouquet-grid">
+                <!-- Rose Bouquet Card with Link -->
+                <a href="/html//u1k_1.html" class="bouquet-card">
+                    <img src="/images/u1k_1.jpg" alt="Under 1K">
+                    <h3>Under 1K</h3><br>
+                    <p>Stand-alone houses designed for one family.</p><br>
+                    <span class="price">₹8500.00</span><br><br><br>
+                    <button class="add-to-cart-btn">Details</button>
+                </a>
+                <a href="/html//u1k_2.html" class="bouquet-card">
+                    <img src="/images/u1k_2.jpg" alt="Under 1K">
+                    <h3>Under 1K</h3><br>
+                    <p>Stand-alone houses designed for one family.</p><br>
+                    <span class="price">₹8500.00</span><br><br><br>
+                    <button class="add-to-cart-btn">Details</button>
+                </a>
+                <a href="/html//u1k_3.html" class="bouquet-card">
+                    <img src="/images/u1k_3.jpg" alt="Under 1K">
+                    <h3>Under 1K</h3><br>
+                    <p>Stand-alone houses designed for one family.</p><br>
+                    <span class="price">₹8500.00</span><br><br><br>
+                    <button class="add-to-cart-btn">Details</button>
+                </a>
+                <a href="/html//u1k_4.html" class="bouquet-card">
+                    <img src="/images/u1k_4.jpg" alt="Under 1K">
+                    <h3>Under 1K</h3><br>
+                    <p>Stand-alone houses designed for one family.</p><br>
+                    <span class="price">₹8500.00</span><br><br><br>
+                    <button class="add-to-cart-btn">Details</button>
+                </a>
+                <a href="/html//u1k_5.html" class="bouquet-card">
+                    <img src="/images/u1k_5.jpg" alt="Under 1K">
+                    <h3>Under 1K</h3><br>
+                    <p>Stand-alone houses designed for one family.</p><br>
+                    <span class="price">₹8500.00</span><br><br><br>
+                    <button class="add-to-cart-btn">Details</button>
+                </a>
+                <a href="/html//u1k_6.html" class="bouquet-card">
+                    <img src="/images/u1k_6.jpg" alt="Under 1K">
+                    <h3>Under 1K</h3><br>
+                    <p>Stand-alone houses designed for one family.</p><br>
+                    <span class="price">₹8500.00</span><br><br><br>
+                    <button class="add-to-cart-btn">Details</button>
+                </a>
+                <!-- Repeat for more Properties -->
+            </div>
+        </section>
+
+
+        <section id="category1" class="bouquet-section">
+
+            <h2>Under 2K</h2>
+            <div class="bouquet-grid">
+                <!-- Rose Bouquet Card with Link -->
+                <a href="/html//u2k_1.html" class="bouquet-card">
+                    <img src="/images/u2k_1.jpg" alt="Under 2K">
+                    <h3>Under 2K</h3><br>
+                    <p>Stand-alone houses designed for one family.</p><br>
+                    <span class="price">₹8500.00</span><br><br><br>
+                    <button class="add-to-cart-btn">Details</button>
+                </a>
+                <a href="/html//u2k_2.html" class="bouquet-card">
+                    <img src="/images/u2k_2.jpg" alt="Under 2K">
+                    <h3>Under 2K</h3><br>
+                    <p>Stand-alone houses designed for one family.</p><br>
+                    <span class="price">₹8500.00</span><br><br><br>
+                    <button class="add-to-cart-btn">Details</button>
+                </a>
+                <a href="/html//u2k_3.html" class="bouquet-card">
+                    <img src="/images/u2k_3.jpg" alt="Under 2K">
+                    <h3>Under 2K</h3><br>
+                    <p>Stand-alone houses designed for one family.</p><br>
+                    <span class="price">₹8500.00</span><br><br><br>
+                    <button class="add-to-cart-btn">Details</button>
+                </a>
+                <a href="/html//u2k_4.html" class="bouquet-card">
+                    <img src="/images/u2k_4.jpg" alt="Under 2K">
+                    <h3>Under 2K</h3><br>
+                    <p>Stand-alone houses designed for one family.</p><br>
+                    <span class="price">₹8500.00</span><br><br><br>
+                    <button class="add-to-cart-btn">Details</button>
+                </a>
+                <a href="/html//u2k_5.html" class="bouquet-card">
+                    <img src="/images/u2k_5.jpg" alt="Under 2K">
+                    <h3>Under 2K</h3><br>
+                    <p>Stand-alone houses designed for one family.</p><br>
+                    <span class="price">₹8500.00</span><br><br><br>
+                    <button class="add-to-cart-btn">Details</button>
+                </a>
+                <a href="/html//u2k_6.html" class="bouquet-card">
+                    <img src="/images/u2k_6.jpg" alt="Under 2K">
+                    <h3>Under 2K</h3><br>
+                    <p>Stand-alone houses designed for one family.</p><br>
+                    <span class="price">₹8500.00</span><br><br><br>
+                    <button class="add-to-cart-btn">Details</button>
+                </a>
+                <!-- Repeat for more Properties -->
+            </div>
+        </section>
+
+
+        <section id="category1" class="bouquet-section">
+
+            <h2>Under 5K</h2>
+            <div class="bouquet-grid">
+                <!-- Rose Bouquet Card with Link -->
+                <a href="/html//u5k_1.html" class="bouquet-card">
+                    <img src="/images/u5k_1.jpg" alt="Under 5K">
+                    <h3>Under 5K</h3><br>
+                    <p>Stand-alone houses designed for one family.</p><br>
+                    <span class="price">₹8500.00</span><br><br><br>
+                    <button class="add-to-cart-btn">Details</button>
+                </a>
+                <a href="/html//u5k_2.html" class="bouquet-card">
+                    <img src="/images/u5k_2.jpg" alt="Under 5K">
+                    <h3>Under 5K</h3><br>
+                    <p>Stand-alone houses designed for one family.</p><br>
+                    <span class="price">₹8500.00</span><br><br><br>
+                    <button class="add-to-cart-btn">Details</button>
+                </a>
+                <a href="/html//u5k_3.html" class="bouquet-card">
+                    <img src="/images/u5k_3.jpg" alt="Under 5K">
+                    <h3>Under 5K</h3><br>
+                    <p>Stand-alone houses designed for one family.</p><br>
+                    <span class="price">₹8500.00</span><br><br><br>
+                    <button class="add-to-cart-btn">Details</button>
+                </a>
+                <a href="/html//u5k_4.html" class="bouquet-card">
+                    <img src="/images/u5k_4.jpg" alt="Under 5K">
+                    <h3>Under 5K</h3><br>
+                    <p>Stand-alone houses designed for one family.</p><br>
+                    <span class="price">₹8500.00</span><br><br><br>
+                    <button class="add-to-cart-btn">Details</button>
+                </a>
+                <a href="/html//u5k_5.html" class="bouquet-card">
+                    <img src="/images/u5k_5.jpg" alt="Under 5K">
+                    <h3>Under 5K</h3><br>
+                    <p>Stand-alone houses designed for one family.</p><br>
+                    <span class="price">₹8500.00</span><br><br><br>
+                    <button class="add-to-cart-btn">Details</button>
+                </a>
+                <a href="/html//u5k_6.html" class="bouquet-card">
+                    <img src="/images/u5k_6.jpg" alt="Under 5K">
+                    <h3>Under 5K</h3><br>
+                    <p>Stand-alone houses designed for one family.</p><br>
+                    <span class="price">₹8500.00</span><br><br><br>
+                    <button class="add-to-cart-btn">Details</button>
+                </a>
+                <!-- Repeat for more Properties -->
+            </div>
+        </section>
+
+
+        <section id="category1" class="bouquet-section">
+
+            <h2>Under 10K</h2>
+            <div class="bouquet-grid">
+                <!-- Rose Bouquet Card with Link -->
+                <a href="/html//u10k_1.html" class="bouquet-card">
+                    <img src="/images/u10k_1.jpg" alt="Under 10K">
+                    <h3>Under 10K</h3><br>
+                    <p>Stand-alone houses designed for one family.</p><br>
+                    <span class="price">₹8500.00</span><br><br><br>
+                    <button class="add-to-cart-btn">Details</button>
+                </a>
+                <a href="/html//u10k_2.html" class="bouquet-card">
+                    <img src="/images/u10k_2.jpg" alt="Under 10K">
+                    <h3>Under 10K</h3><br>
+                    <p>Stand-alone houses designed for one family.</p><br>
+                    <span class="price">₹8500.00</span><br><br><br>
+                    <button class="add-to-cart-btn">Details</button>
+                </a>
+                <a href="/html//u10k_3.html" class="bouquet-card">
+                    <img src="/images/u10k_3.jpg" alt="Under 10K">
+                    <h3>Under 10K</h3><br>
+                    <p>Stand-alone houses designed for one family.</p><br>
+                    <span class="price">₹8500.00</span><br><br><br>
+                    <button class="add-to-cart-btn">Details</button>
+                </a>
+                <a href="/html//u10k_4.html" class="bouquet-card">
+                    <img src="/images/u10k_4.jpg" alt="Under 10K">
+                    <h3>Under 10K</h3><br>
+                    <p>Stand-alone houses designed for one family.</p><br>
+                    <span class="price">₹8500.00</span><br><br><br>
+                    <button class="add-to-cart-btn">Details</button>
+                </a>
+                <a href="/html//u10k_5.html" class="bouquet-card">
+                    <img src="/images/u10k_5.jpg" alt="Under 10K">
+                    <h3>Under 10K</h3><br>
+                    <p>Stand-alone houses designed for one family.</p><br>
+                    <span class="price">₹8500.00</span><br><br><br>
+                    <button class="add-to-cart-btn">Details</button>
+                </a>
+                <a href="/html//u10k_6.html" class="bouquet-card">
+                    <img src="/images/u10k_6.jpg" alt="Under 10K">
+                    <h3>Under 10K</h3><br>
+                    <p>Stand-alone houses designed for one family.</p><br>
+                    <span class="price">₹8500.00</span><br><br><br>
+                    <button class="add-to-cart-btn">Details</button>
+                </a>
+                <!-- Repeat for more Properties -->
+            </div>
+        </section>
+
+
+        <section id="category1" class="bouquet-section">
+
+            <h2>Under 25K</h2>
+            <div class="bouquet-grid">
+                <!-- Rose Bouquet Card with Link -->
+                <a href="/html//u25k_1.html" class="bouquet-card">
+                    <img src="/images/u25k_1.jpg" alt="Under 25K">
+                    <h3>Under 25K</h3><br>
+                    <p>Stand-alone houses designed for one family.</p><br>
+                    <span class="price">₹8500.00</span><br><br><br>
+                    <button class="add-to-cart-btn">Details</button>
+                </a>
+                <a href="/html//u25k_2.html" class="bouquet-card">
+                    <img src="/images/u25k_2.jpg" alt="Under 25K">
+                    <h3>Under 25K</h3><br>
+                    <p>Stand-alone houses designed for one family.</p><br>
+                    <span class="price">₹8500.00</span><br><br><br>
+                    <button class="add-to-cart-btn">Details</button>
+                </a>
+                <a href="/html//u25k_3.html" class="bouquet-card">
+                    <img src="/images/u25k_3.jpg" alt="Under 25K">
+                    <h3>Under 25K</h3><br>
+                    <p>Stand-alone houses designed for one family.</p><br>
+                    <span class="price">₹8500.00</span><br><br><br>
+                    <button class="add-to-cart-btn">Details</button>
+                </a>
+                <a href="/html//u25k_4.html" class="bouquet-card">
+                    <img src="/images/u25k_4.jpg" alt="Under 25K">
+                    <h3>Under 25K</h3><br>
+                    <p>Stand-alone houses designed for one family.</p><br>
+                    <span class="price">₹8500.00</span><br><br><br>
+                    <button class="add-to-cart-btn">Details</button>
+                </a>
+                <a href="/html//u25k_5.html" class="bouquet-card">
+                    <img src="/images/u25k_5.jpg" alt="Under 25K">
+                    <h3>Under 25K</h3><br>
+                    <p>Stand-alone houses designed for one family.</p><br>
+                    <span class="price">₹8500.00</span><br><br><br>
+                    <button class="add-to-cart-btn">Details</button>
+                </a>
+                <a href="/html//u25k_6.html" class="bouquet-card">
+                    <img src="/images/u25k_6.jpg" alt="Under 25K">
+                    <h3>Under 25K</h3><br>
+                    <p>Stand-alone houses designed for one family.</p><br>
+                    <span class="price">₹8500.00</span><br><br><br>
+                    <button class="add-to-cart-btn">Details</button>
+                </a>
+                <!-- Repeat for more Properties -->
+            </div>
+        </section>
+
+
+
+    </main>
+
+    <!--Footer-->
+    <my-footer></my-footer>
+
+
+    <!--JavaScript link-->
+    <script src="/js/script.js"></script>
+
+
+</body>
+</html>

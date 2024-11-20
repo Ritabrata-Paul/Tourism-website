@@ -1,0 +1,67 @@
+
+/* Slider container */
+.slider {
+    position: relative;
+    max-width: 1600px;
+    max-height: 500px;
+    margin: auto;
+    overflow: hidden;
+}
+
+/* Slides */
+.slides {
+    display: flex;
+    transition: transform 1s ease-in-out;
+}
+
+/* Individual slide */
+.slide {
+    min-width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+    position: relative;
+    transition: opacity 1s ease;
+}
+
+@keyframes slide {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-100%); }
+    50% { transform: translateX(-200%); }
+    75% { transform: translateX(-300%); }
+    100% { transform: translateX(0); } /* Return to the start */
+}
+
+/* Slide images */
+.slide img {
+    width: 100%;
+    border-radius: 20px;
+    margin-top: 5px;
+    background-repeat: no-repeat;
+}
+
+/* Slide captions */
+.slide h2 {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    font-size: 1.5rem;
+    border-radius: 5px;
+}
+
+
+blur background
+    transition: background-color 0.3s ease;
+    backdrop-filter: blur(60px);
+
+    header footer
+    
+    <!--Header-->
+    <my-header></my-header>
+    <div class="slide"></div>
+
+    <!-- Footer -->
+    <my-footer></my-footer>
